@@ -2,17 +2,19 @@ from bs4 import BeautifulSoup
 import requests
 import json
 
-my_url = https://www.apartments.com/907-third-champaign-il/50v7g2q/
+my_url = https://www.apartments.com/champaign-il/
 response = requests.get(my_url)
 soup = BeautifulSoup(response.text, “html.parser”)
 
-amenities = []
-for amenity in soup.findAll('div', attrs = {"class": "feature-list"}):
-    amenityObj = {
-    "features": amenity.find('p', attrs={"class": "uppercase"}).text.encode('utf-8')
+priceArray = []
+for price in soup.findAll('div', attrs = {"class": "apartmentRentRollupContainer"}):
+    priceObj = {
+    "Prices": priceArray.find('span', attrs={"class": "altRentDisplay"}).text.encode('utf-8'))
     }
-    amenities.append(ammenityObj)
-    print(ammenityObj)
+    priceArray.append(priceObj)
+    print(priceObj)
 
-with open('amenityData.json', 'w') as file:
-    json.dump(amenities, file)
+with open('priceData.json', 'w') as file:
+    json.dump(priceArray, file)
+    
+
