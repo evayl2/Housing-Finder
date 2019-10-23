@@ -2,14 +2,14 @@ from bs4 import BeautifulSoup
 import requests
 import json
 
-my_url = https://www.apartments.com/champaign-il/
+my_url = 'https://www.apartments.com/off-campus-housing/il/champaign/university-of-illinois-at-urbana-champaign/'
 response = requests.get(my_url)
-soup = BeautifulSoup(response.text, “html.parser”)
+content = BeautifulSoup(response.content, "html.parser")
 
 priceArray = []
 for price in soup.findAll('div', attrs = {"class": "apartmentRentRollupContainer"}):
     priceObj = {
-    "Prices": priceArray.find('span', attrs={"class": "altRentDisplay"}).text.encode('utf-8'))
+    "Prices": priceArray.find('span', attrs={"class": "altRentDisplay"}).text.encode('utf-8')
     }
     priceArray.append(priceObj)
     print(priceObj)
