@@ -3,7 +3,18 @@
     <body>
         <form action="/settings" method="post">
             <input type="text" name="Name"></input>
-            <input type="text" name="Email"></input>
+            <input type="email" name="Email"></input>
+            <input type="radio" name="Gender" value="Male"></input>
+            <input type="radio" name="Gender" value="Female"></input>
+            <input type="radio" name="Gender" value="Other"></input>
+            <input type="radio" name="Year" value="Freshman"></input>
+            <input type="radio" name="Year" value="Sophomore"></input>
+            <input type="radio" name="Year" value="Junior"></input>
+            <input type="radio" name="Year" value="Senior"></input>
+            <input type="range" name="Desired Price" min="0" max="1000"></input>
+            <select>
+                <option value=""></option>
+            </select>
             <input type="submit" value="Signup"></input>
         </form>
     </body>
