@@ -4,6 +4,5 @@ const aptSchema = new mongoose.Schema({
   beds: Number,
   baths: Number,
   price: Number,
-  location: Number
 });
 module.exports = mongoose.model('Apartment Listing', aptSchema);
