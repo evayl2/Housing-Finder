@@ -3,6 +3,7 @@ const aptSchema = new mongoose.Schema({
   name: String,
   beds: Number,
   baths: Number,
+  major: String,
   price: Number,
   latitude: Number,
   longitude: Number,
