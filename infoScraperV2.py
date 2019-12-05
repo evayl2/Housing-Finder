@@ -34,7 +34,6 @@ for location in content.findAll('header', attrs = {"class": "placardHeader"}):
         "names": (location.find('a', {"class": ['placardTitle', 'js-placardTitle']})).get('title'),
         "addresses": (location.find('div', attrs={"class": "location"})).get('title'),
         "propertyGroup": (location.find('img', attrs={"class": "propertyLogo"})).get('alt'),
-        
     }
     print(nameAddressPropertyObject)
     nameAddressPropertyArr.append(nameAddressPropertyObject)
