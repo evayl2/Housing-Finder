@@ -8,5 +8,6 @@ const aptSchema = new mongoose.Schema({
   latitude: Number,
   longitude: Number,
   address: String,
+  propertyGroup: String,
 });
 module.exports = mongoose.model('Apartment Listing', aptSchema);
