@@ -1,7 +1,7 @@
 require('dotenv').config({ path: './variables.env' });
 
 const connectToDatabase = require('./db');
-const aptListing = require('../Desktop/Models/aptlisting');
+const aptListing = require('/Models/aptlisting');
 
 'use strict';
 
