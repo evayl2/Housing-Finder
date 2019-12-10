@@ -17,6 +17,7 @@
    <!-- skin -->
   <link rel="stylesheet" href="default.css">
   <link rel="shortcut icon" href="favicon.ico">
+  
 </head>
 
 
@@ -28,7 +29,7 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
           <li class="active"><a href="home.html">Home</a></li>
-          <li><a href="home.html">Search for Housing</a></li>
+          <li><a href="userhome.html">Search for Housing</a></li>
           <li><a href="home.html">Logout</a></li>
         </ul>
       </div>
@@ -55,7 +56,7 @@
   <section id="section-services" class="section pad-bot30 bg-white">
     <div class="container">
 
-		<form action="homeresults.html">
+		<form id="myform">
 		<div class = "align-center">
 			<div class="row mar-bot40">
 			
@@ -63,7 +64,7 @@
 				<div class="align-center">
 				
 					<h4 class="text-bold">Enter Your Major</h4>
-					<input type = "text">
+					<input type = "text" id="major">
 					<p> Our algorithm will find the best locations around campus that will suit you and your friends' majors
 					</p>
 				<div>
@@ -73,8 +74,8 @@
 			  <div class="align-center">
 			  
 				<h4 class="text-bold">Bed & Baths</h4>
-				Beds <input type="number">
-				Baths <input type="number">
+				Beds <input type="number" id="beds">
+				Baths <input type="number" id="baths">
 				<p> Choose the number of beds/baths, as well as other amenities that you would want in your home
 				</p>
 			  </div>
@@ -84,15 +85,15 @@
 			
 			  <div class="align-center">
 				<h4 class="text-bold">Price Range</h4>
-				<select>
-					<option value="volvo"> < $300 </option>
-					<option value="saab"> $300 - $500</option>
-					<option value="opel">$500 - $800</option>
-					<option value="audi"> > $800</option>
+				<select id="price-select">
+					<option value="300"> < $300 </option>
+					<option value="500"> $300 - $500</option>
+					<option value="800">$500 - $800</option>
+					<option value="900"> > $800</option>
 				</select>
 				<p> We will match your desired features with the most affordable housing and best deals around!
 				</p>
-				<input type="submit" value="Search Now"/>
+				<input type="button" onclick="getApartments()" value="Search Now"/>
 			  </div>
 			
 
@@ -102,9 +103,10 @@
     </div>
   </section>
 
-  <section id="testimonials" class="section" data-stellar-background-ratio="0.5">
+ <section id="testimonials" class="section" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row">
+	  <h1 class = "align-center" style="color: white"> Our Mission </h1>
         <div class="col-lg-12">
           <div class="align-center">
             <div class="testimonial pad-top40 pad-bot40 clearfix">
@@ -133,28 +135,17 @@
         </div>
       </div>
 
-      <div class="row align-center mar-bot40">
-        <div class="col-md-3">
+    <div class="row align-center mar-bot40">
+		<div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="flora.jpeg" alt="" /></figure>
+            <figure class="member-photo"><img src="jackie.jpg" alt="" /></figure>
             <div class="team-detail">
-              <h4>Flora</h4>
-              Backend
-            </div>
-          </div>
-		  <br>
-        </div>
-        <div class="col-md-3">
-          <div class="team-member">
-            <figure class="member-photo"><img src="saket.jpeg" alt="" /></figure>
-            <div class="team-detail">
-              <h4>Saket</h4>
-              Algorithms/Webscraping
+              <h4>Jackie</h4>
+              Project Manager
             </div>
           </div>
         </div>
-		<br>
-        <div class="col-md-3">
+		<div class="col-md-3">
           <div class="team-member">
             <figure class="member-photo"><img src="eva.jpeg" alt="" /></figure>
             <div class="team-detail">
@@ -163,21 +154,68 @@
             </div>
           </div>
         </div>
-		<br>
-        <div class="col-md-3">
+		<div class="col-md-3">
           <div class="team-member">
             <figure class="member-photo"><img src="tejal.jpeg" alt="" /></figure>
             <div class="team-detail">
               <h4>Tejal</h4>
-              Algorithms/Webscraping
+              Webscraping
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="flora.jpeg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Flora</h4>
+              Backend
+            </div>
+          </div>
+        </div>
+	</div>
+	<div class="row align-center mar-bot40">
+        <div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="saket.jpeg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Saket</h4>
+              Web API
+            </div>
+          </div>
+        </div>
+		
+		<div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="peter.jpg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Peter</h4>
+              Algorithms
+            </div>
+          </div>
+        </div>
+		<div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img width="180px" height="180px" src="pooja.jpg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Pooja</h4>
+              Backend
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="alex.jpg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Alex</h4>
+              Algorithms
             </div>
           </div>
         </div>
       </div>
 
     </div>
-  </section>
-  
+  </section>	
+  <script src="search.js"></script>
   </body>
 
 </html>

@@ -17,6 +17,7 @@
   <!-- skin -->
   <link rel="stylesheet" href="default.css">
   <link rel="shortcut icon" href="favicon.ico">
+  <script src="search.js"></script>
 </head>
 
 <body>
@@ -27,8 +28,8 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
           <li><a href="home.html">Home</a></li>
-          <li><a href="home.html">Search for Housing</a></li>
-          <li class="active"><a href="user-login.html">Register/Log In</a></li>
+          <li class="active"><a href="home.html">Search for Housing</a></li>
+          <li><a href="user-login.html">Register/Log In</a></li>
         </ul>
       </div>
     </div>
@@ -52,37 +53,68 @@
 
   <!-- services -->
   <section id="section-services" class="section pad-bot30 bg-white">
-    <div class="row mar-bot40">
-        <div class="col-md-6 col-md-offset-3">
-			<form id="form-login" action="userhome.html">
-
-				<div class="align-center">
-			
-				<label for="input-username" class="col-md-2 control-label">Username</label>
-				<!--<div class="col-md-3">-->
-				<input type="text" class="form-control" id="input-username" name="username" placeholder="Enter your username" maxlength="20" />
-        
-				<label for="input-password" class="col-md-2 control-label">Password</label>
-				<!--<div class="col-md-3">-->
-				<input type="password" class="form-control" id="input-password" name="password" placeholder="Enter your password" maxlength="20" />
-				</div>
-				<input class="custom-control-input" type="checkbox" id="input-remember" name="remember">
-				<label class="custom-control-label" for="input-remember">Remember me</label>
-				<br>
-				<br>
-				<button type="submit" id="button-submit" class="align-center">Submit</button>
-			</form>
-			<div class="align-center">
-			<a href="register.html"> Not a user? Register here! </a>
+    <div class="container" id="results">
+		<div class = "align-center">
+			<h1 style="color: #f0a64d"> Your Results </h1>
+			<br>
+			<div class="row mar-bot40">
+				<img src="cs1.jpg" height="208px" width="310px">
+				<p style="color: #f0a64d"> Bailey's Apartments: 901 W Springfield Avenue, Urbana, IL <br>
+				 Price per month: $762 
+				 <br>
+				 <a href = "https://www.apartments.com/bailey-student-apartments-urbana-il/dq87hfk/"> Click for Link </a>
+				</p>
 			</div>
-	     </div>
-        </div>
-			
-	</div>
-		
+			<br>
+			<div class="row mar-bot40">
+				<img src="cs2.jpg" height="208px" width="310px">
+				<p style="color: #f0a64d"> Element on Main: 502 W Main St, Urbana, IL <br>
+				 Price per month: $775 
+				 <br>
+				 <a href = "https://www.apartments.com/element-on-main-urbana-il/lbjkd1f/"> Click for Link </a>
+				</p>
+			</div>
+			<br>
+			<div class="row mar-bot40">
+				<img src="cs3.jpg" height="208px" width="310px">
+				<p style="color: #f0a64d"> Smith Apartments: 53 E Chalmers St, Champaign, IL <br>
+				 Price per month: $700 
+				 <br>
+				 <a href = "https://www.apartments.com/smith-apartments-53-east-chalmers-champaign-il/259jlm8/"> Click for Link </a>
+				</p>
+			</div>
+			<br>
+			<div class="row mar-bot40">
+				<img src="cs4.jpg" height="208px" width="310px">
+				<p style="color: #f0a64d"> 901 Western: 901 Western Avenue, Urbana, IL <br>
+				 Price per month: $800
+				 <br>
+				 <a href = "https://www.apartments.com/901-western-urbana-il/dh0p8gl/"> Click for Link </a>
+				</p>
+			</div>
+			<br>
+			<div class="row mar-bot40">
+				<img src="cs5.jpg" height="208px" width="310px">
+				<p style="color: #f0a64d"> Midtown Lofts: 512 S Third St, Champaign, IL <br>
+				 Price per month: $709 
+				 <br>
+				 <a href = "https://www.apartments.com/midtown-lofts-champaign-il/v90x0te/"> Click for Link </a>
+				</p>
+			</div>
+			<br>
+			<div class="row mar-bot40">
+				<img src="cs6.jpg" height="208px" width="310px">
+				<p style="color: #f0a64d"> Smith Apartments: 1010 W Clark Street, Urbana, IL <br>
+				 Price per month: $535 
+				 <br>
+				 <a href = "https://www.apartments.com/smith-apartments-1010-west-clark-urbana-il/h50tt62/"> Click for Link </a>
+				</p>
+			</div>
+			<input type="button" value="Load More Results"/>
+		</div>
+    </div>
   </section>
 
-  <!-- about -->
   <section id="testimonials" class="section" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row">
@@ -182,7 +214,7 @@
             </div>
           </div>
         </div>
-		<div class="col-md-3">
+        <div class="col-md-3">
           <div class="team-member">
             <figure class="member-photo"><img src="alex.jpg" alt="" /></figure>
             <div class="team-detail">
@@ -191,7 +223,6 @@
             </div>
           </div>
         </div>
-        
       </div>
 
     </div>
@@ -200,6 +231,3 @@
   </body>
 
 </html>
-
-  
- 
