@@ -1,0 +1,96 @@
+/** This is the css styling for the home page **/
+
+/** This is the navigation bar **/
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #a8e6d6;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding:  24px;
+	text-decoration: none;
+	font-size: 150%;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+li a:hover {
+	background-color: #59baa3;
+	
+}
+
+/** This is the css for the body **/
+body {
+	background-color: #d5efe9;
+
+}
+
+/** This is the css for the header **/
+h1{
+	font-size: 175%;
+	color: #59baa3;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+/** This is the css for the madlibs div **/
+div#madlib {
+	border: 5px solid  #59baa3 ;
+	height: 600px;
+	width: 450px;
+	background-color:#a8e6d6;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	padding-right: 20px;
+	float: left;
+	position: absolute;
+	margin-left: 50px;
+	margin-top: 50px;
+	border-radius: 25px;
+	color: white;
+	font-size: 125%;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+/** This is the css for the calculator div **/
+div#calculator {
+	padding-bottom: 30px;
+	margin-left: 500px;
+	padding-right: 20px;
+	height: 600px;
+	width: 480px;
+	background-color: #a8e6d6;
+	border: 5px solid #59baa3;
+	float: right;
+	border-radius: 25px;
+	margin-top: 50px;
+	padding-left:30px;
+	margin-right: 50px;
+	color: white;
+	font-size: 125%;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+/** This  is the css for the madlibs image **/
+img#madlibs {
+	display: block;
+	margin: auto;
+	border-radius: 25px;
+}
+
+/** This is the css for the calculator image **/
+img#calculator {
+	display: block;
+	margin: auto;
+	width: 460px;
+	border-radius: 25px;
+}
