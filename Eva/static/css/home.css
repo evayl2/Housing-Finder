@@ -345,7 +345,7 @@ section.section {
 	background-image: url(../img/parallax/img2.jpg);
 }
 #testimonials{	
-	background-image: url(../img/parallax/img3.jpg);
+	background-color: #f0a64d;
 }
 /*===========================
   --- Header & menu ----
@@ -353,7 +353,7 @@ section.section {
 .navbar {
 	line-height: 100px;
 	height: 100px;
-	background-color: rgba(0,0,0,0.3);
+	background-color: #f0a64d;
 	display: block;
 	vertical-align: middle;
 	text-align: center;
@@ -364,6 +364,7 @@ section.section {
 .navbar .navbar-collapse {
 	margin-bottom: 0;
 	padding-bottom:0;
+	background-color: #f0a64d;
 }
 
 .nav li {
@@ -371,6 +372,7 @@ section.section {
 	line-height: 100%;
 	margin-bottom: 0;
 	padding-bottom:0;
+	background-color: #f0a64d;
 }
 
 .nav>li>a {
@@ -383,6 +385,7 @@ section.section {
 	font-size: 13px;
 	letter-spacing: .1em;
 	text-transform: uppercase;
+	background-color: #f0a64d;
 }
 
 .nav>li>a:hover {
@@ -394,6 +397,7 @@ section.section {
 	float: right;
 	margin-bottom: 0;
 	padding-bottom:0;	
+	background-color: #f0a64d;
 }
 
 .navbar .navbar-nav > .active > a {
@@ -425,10 +429,12 @@ h1 a.navbar-brand {
 	padding: 0;
 	margin: 0;
 	width: 80px;
+	background-color: #f0a64d;
 }
 
 .navbar-collapse.in {
 	margin-top: -5px !important;
+	background-color: #f0a64d;
 }
 
 /*===========================
@@ -599,7 +605,7 @@ About
 =========================== */
 
 .member-photo {
-	box-sizing:border-box;
+	box-sizing:150px;
 	-webkit-border-radius:50%;
 		-moz-border-radius:50%;
 			border-radius:50%;	
@@ -609,6 +615,7 @@ About
 	-webkit-border-radius:50%;
 		-moz-border-radius:50%;
 			border-radius:50%;	
+	margin: 0 0 20px 0;
 }
 
 .team-detail h4 {
@@ -745,7 +752,7 @@ nav#filter a {
 .testimonial h5 {
 	color: #fff;
 	font-size: 18px;
-	font-family: Georgia, sans-serif;
+	/*font-family: Georgia, sans-serif;*/
 	line-height: 1.5em;
 }	
 

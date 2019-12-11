@@ -10,32 +10,29 @@
   <title>Illini Housing Finder</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static',     filename='isotope.css') }}" media="screen" />
-  <link rel="stylesheet" href="{{ url_for('static',     filename='css/bootstrap.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static',     filename='css/bootstrap-theme.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static',     filename='css/home.css') }}">
+  <link rel="stylesheet" type="text/css" href="isotope.css" media="screen" />
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-theme.css">
+  <link rel="stylesheet" href="home.css">
    <!-- skin -->
-  <link rel="stylesheet" href="{{ url_for('static',     filename='css/default.css') }}">
-  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="stylesheet" href="default.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  
 </head>
+
 
 <body>
   <section id="header" class="appear"></section>
-  <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">
+  <div class="navbar navbar-fixed-top" role="navigation">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="fa fa-bars color-white"></span>
-					</button>
-      </div>
+      
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#section-works">Search for Housing</a></li>
-          <li><a href="#section-contact">Register/Log In</a></li>
+          <li class="active"><a href="home.html">Home</a></li>
+          <li><a href="home.html">Search for Housing</a></li>
+          <li><a href="user-login.html">Register/Log In</a></li>
         </ul>
       </div>
-      <!--/.navbar-collapse -->
     </div>
   </div>
 
@@ -59,48 +56,49 @@
   <section id="section-services" class="section pad-bot30 bg-white">
     <div class="container">
 
-      <div class="row mar-bot40">
-        <div class="col-lg-4">
-          <div class="align-center">
-            <i class="fa fa-code fa-5x mar-bot20"></i>
-            <h4 class="text-bold">Upload your schedule</h4>
-            <p> Our algorithm will find the best locations around campus that will suit you and your friends' schedules
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="align-center">
-            <i class="fa fa-terminal fa-5x mar-bot20"></i>
-            <h4 class="text-bold">Bed & Baths</h4>
-            <p> Choose the number of beds/baths, as well as other amenities that you would want in your home
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="align-center">
-            <i class="fa fa-bolt fa-5x mar-bot20"></i>
-            <h4 class="text-bold">Price Range</h4>
-            <p> We will match your desired features with the most affordable housing and best deals around!
-            </p>
-          </div>
-        </div>
-
-      </div>
-
+		<form id="myform">
+		<div class = "align-center">
+			<div class="row mar-bot40">
+				<div class="align-center">
+					<h4 class="text-bold">Enter Your Major</h4>
+					<input type = "text" id="major">
+					<p> Our algorithm will find the best locations around campus that will suit you and your friends' majors
+					</p>
+				</div>
+			    <div class="align-center">
+			  
+					<h4 class="text-bold">Bed & Baths</h4>
+					Beds <input type="number" id="beds">
+					Baths <input type="number" id="baths">
+					<p> Choose the number of beds/baths, as well as other amenities that you would want in your home
+					</p>
+				</div>
+			    <div class="align-center">
+					<h4 class="text-bold">Price Range</h4>
+					<select id="price-select">
+						<option value="300"> < $300 </option>
+						<option value="500"> $300 - $500</option>
+						<option value="800">$500 - $800</option>
+						<option value="900"> > $800</option>
+					</select>
+					<p> We will match your desired features with the most affordable housing and best deals around!
+					</p>
+					<input type="button" onclick="getApartments()" value="Search Now"/>
+			    </div>
+			</div>
+		</form>
+		</div>
     </div>
   </section>
-
   <section id="testimonials" class="section" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row">
+	  <h1 class = "align-center" style="color: white"> Our Mission </h1>
         <div class="col-lg-12">
           <div class="align-center">
             <div class="testimonial pad-top40 pad-bot40 clearfix">
-              <h5>
-        								Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
-        							</h5>
+				<h5> We all know that one of the most stressful things for students is deciding where to live in the coming school year. With multiple factors such as price, amenities, and location, trying to accomodate for everyone living together can be very tough. That's why Illini Housing Finder wants to make the process easier. By allowing students to create accounts with their preferences and create groups with other students, our algorithms take the information that each student enters to find the optimal apartment or university housing option that best suits everyone's needs. Try it today!
+				</h5>
               <br/>
             </div>
 
@@ -124,48 +122,87 @@
         </div>
       </div>
 
-      <!--<div class="row align-center mar-bot40">
-        <div class="col-md-3">
+    <div class="row align-center mar-bot40">
+		<div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member1.jpg" alt="" /></figure>
+            <figure class="member-photo"><img src="jackie.jpg" alt="" /></figure>
             <div class="team-detail">
-              <h4>Jason Doe</h4>
-              <span>User experiences</span>
+              <h4>Jackie</h4>
+              Project Manager
+            </div>
+          </div>
+        </div>
+		<div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="eva.jpeg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Eva</h4>
+			  Frontend
+            </div>
+          </div>
+        </div>
+		<div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="tejal.jpeg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Tejal</h4>
+              Webscraping
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member2.jpg" alt="" /></figure>
+            <figure class="member-photo"><img src="flora.jpeg" alt="" /></figure>
             <div class="team-detail">
-              <h4>Timothy Clark</h4>
-              <span>Web developer</span>
+              <h4>Flora</h4>
+              Backend
+            </div>
+          </div>
+        </div>
+	</div>
+	<div class="row align-center mar-bot40">
+        <div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="saket.jpeg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Saket</h4>
+              Web API
+            </div>
+          </div>
+        </div>
+		
+		<div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="peter.jpg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Peter</h4>
+              Algorithms
+            </div>
+          </div>
+        </div>
+		<div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img width="180px" height="180px" src="pooja.jpg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Pooja</h4>
+              Backend
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member3.jpg" alt="" /></figure>
+            <figure class="member-photo"><img src="alex.jpg" alt="" /></figure>
             <div class="team-detail">
-              <h4>Vicky Tan</h4>
-              <span>Web designer</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member4.jpg" alt="" /></figure>
-            <div class="team-detail">
-              <h4>Kevin Peterson</h4>
-              <span>UI designer</span>
+              <h4>Alex</h4>
+              Algorithms
             </div>
           </div>
         </div>
       </div>
 
     </div>
-  </section> -->
-  <!-- /about -->
+  </section>	
+  <script src="search.js"> </script>
   </body>
 
 </html>
